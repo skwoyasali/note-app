@@ -90,7 +90,7 @@ export const googleAuthCallback = (req, res, next) => {
 
     // Redirect with token + user details
     res.redirect(
-      `${process.env.FRONTEND_URL}/note/oauth-success?token=${token}&name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}`
+      `${process.env.FRONTEND_URL}/oauth-success?token=${token}&name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}`
     );
   })(req, res, next);
 };
